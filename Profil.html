@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - Explore Bali</title>
+    <link rel="icon" href="Folder foto/Logobali.jpeg" type="image/png" />
+
+    <!-- Tautan Pembentuk Wujud (CSS Bootstrap) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background-color: #fdf5e6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Bilah Navigasi (Datar / Flat) -->
+    <div class="p-3 mb-4 bg-secondary-subtle text-secondary-emphasis shadow-sm">
+      <nav class="nav align-items-center container">
+        <img src="Folder foto/Logobali.jpeg" alt="Logo" style="margin-right: 15px; width: 50px; border-radius: 50%" />
+        <a class="nav-link active fw-bold text-dark" aria-current="page" href="profil.html">Profil</a>
+        <a class="nav-link text-dark" href="form.html">Pendaftaran</a>
+        <a class="nav-link text-dark" href="index.html">Beranda</a>
+        <a class="nav-link text-dark" href="layanan.html">Layanan</a>
+      </nav>
+    </div>
+
+    <!-- Wadah Utama -->
+    <div class="container mb-5" style="margin-top: 30px">
+      <!-- Bingkai Profil (Card) -->
+      <div class="card shadow mx-auto" style="max-width: 800px; border-radius: 10px">
+        <div class="card-header text-center bg-dark text-white" style="border-radius: 10px 10px 0 0">
+          <h2 class="mb-0 py-2" style="font-family: sans-serif; letter-spacing: 2px">PROFIL SAYA</h2>
+        </div>
+
+        <div class="card-body p-4 p-md-5 text-center">
+          <!-- Pasfoto -->
+          <img src="Folder foto/mbg.jpg" class="rounded-circle mb-4 shadow-sm" alt="Foto Profil" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #eaeaea" />
+
+          <!-- Keterangan Diri -->
+          <p class="lead text-muted mb-5 text-justify">
+            Saya adalah mahasiswa yang sedang mempelajari dasar-dasar pengembangan website menggunakan HTML. Website ini dibuat sebagai bagian dari tugas Ujian Akhir Semester pada mata kuliah Pemrograman Web. Melalui proyek ini saya belajar
+            membuat struktur halaman website, navigasi antar halaman, serta menampilkan informasi menggunakan kerangka kerja Bootstrap.
+          </p>
+
+          <hr class="mb-4" />
+
+          <!-- Tabel Biodata -->
+          <h4 class="mb-4 fw-bold text-dark">Biodata Diri</h4>
+          <div class="table-responsive mb-5">
+            <table class="table table-bordered table-hover text-start align-middle">
+              <tbody>
+                <tr>
+                  <th style="width: 35%; background-color: #f8f9fa">Nama Lengkap</th>
+                  <td>Sasuke</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #f8f9fa">Nomor Induk Mahasiswa</th>
+                  <td>24.53.030593</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #f8f9fa">Program Studi</th>
+                  <td>Ilmu Komputer</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #f8f9fa">Institusi Pendidikan</th>
+                  <td>Universitas Muhammadiyah Palangkaraya</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #f8f9fa">Tempat & Tanggal Lahir</th>
+                  <td>China, 21 Desember 2006</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Daftar Keahlian (List Group) -->
+          <h4 class="mb-3 fw-bold text-dark">Keahlian yang Dipelajari</h4>
+          <ul class="list-group list-group-flush text-start mx-auto border rounded shadow-sm" style="max-width: 500px">
+            <li class="list-group-item bg-transparent">HTML & Struktur Dasar Website</li>
+            <li class="list-group-item bg-transparent">CSS & Kerangka Kerja Bootstrap 5</li>
+            <li class="list-group-item bg-transparent">Desain Tata Letak Responsif</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-4 pb-2 mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <h5 class="fw-bold text-warning">Explore Bali</h5>
+            <p class="text-secondary small">Proyek website ini dibangun untuk memenuhi Ujian Akhir Semester mata kuliah Pemrograman Web. Mengeksplorasi keindahan alam dan budaya Pulau Dewata melalui pendekatan desain yang responsif.</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <h5 class="fw-bold">Tautan Navigasi</h5>
+            <ul class="list-unstyled small">
+              <li><a href="index.html" class="text-decoration-none text-secondary">Beranda</a></li>
+              <li><a href="layanan.html" class="text-decoration-none text-secondary">Wisata Bali</a></li>
+              <li><a href="form.html" class="text-decoration-none text-secondary">Form Pendaftaran</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <h5 class="fw-bold">Kontak</h5>
+            <ul class="list-unstyled text-secondary small">
+              <li>Fadhil Rizqan Sasuke</li>
+              <li>NIM: 24.53.030593</li>
+              <li>Ilmu Komputer UMPR</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary" />
+        <div class="text-center text-secondary small">&copy; 2026 Explore Bali | Built with Bootstrap 5</div>
+      </div>
+    </footer>
+
+    <!-- Tanda Pengenal Melayang -->
+    <div class="position-fixed bottom-0 end-0 p-3 text-center bg-white border border-dark rounded m-3 shadow-lg" style="z-index: 1050">
+      <img src="Folder foto/Sasuke.JPG" class="rounded-circle" style="width: 45px; height: 45px; object-fit: cover" alt="Profil Penulis" />
+      <strong class="d-block mt-2" style="font-size: 14px">Fadhil Rizqan Sasuke</strong>
+      <span class="text-muted" style="font-size: 12px">24.53.030593</span>
+    </div>
+
+    <!-- Tautan Mesin Penggerak (JS Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

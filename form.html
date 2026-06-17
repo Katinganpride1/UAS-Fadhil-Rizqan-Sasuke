@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profil - Explore Bali</title>
+    <title>Form Pendaftaran - Explore Bali</title>
     <link rel="icon" href="Folder foto/Logobali.jpeg" type="image/png" />
 
-    <!-- Tautan Pembentuk Wujud (CSS Bootstrap) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
@@ -15,6 +14,7 @@
       }
     </style>
   </head>
+
   <body>
     <nav class="navbar navbar-expand-lg bg-secondary-subtle shadow-sm mb-4 py-3">
       <div class="container">
@@ -45,66 +45,133 @@
         </div>
       </div>
     </nav>
-    <!-- Wadah Utama -->
-    <div class="container mb-5" style="margin-top: 30px">
-      <!-- Bingkai Profil (Card) -->
-      <div class="card shadow mx-auto" style="max-width: 800px; border-radius: 10px">
-        <div class="card-header text-center bg-dark text-white" style="border-radius: 10px 10px 0 0">
-          <h2 class="mb-0 py-2" style="font-family: sans-serif; letter-spacing: 2px">PROFIL SAYA</h2>
+
+    <div class="container mb-5" style="max-width: 700px; margin-top: 30px">
+      <div class="card shadow">
+        <div class="card-header text-center text-white" style="background-color: #d35400">
+          <h3 class="mb-0 py-2">Formulir Pendaftaran Akun & Wisata</h3>
         </div>
 
-        <div class="card-body p-4 p-md-5 text-center">
-          <!-- Pasfoto -->
-          <img src="Folder foto/mbg.jpg" class="rounded-circle mb-4 shadow-sm" alt="Foto Profil" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #eaeaea" />
+        <div class="card-body p-4 p-md-5">
+          <form id="formPemesanan" action="" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label class="form-label fw-bold">Nama Lengkap:</label>
+              <input type="text" name="nama" id="inputNama" class="form-control" placeholder="Masukkan nama lengkap Anda" />
+            </div>
 
-          <!-- Keterangan Diri -->
-          <p class="lead text-muted mb-5 text-justify">
-            Saya adalah mahasiswa yang sedang mempelajari dasar-dasar pengembangan website menggunakan HTML. Website ini dibuat sebagai bagian dari tugas Ujian Akhir Semester pada mata kuliah Pemrograman Web. Melalui proyek ini saya belajar
-            membuat struktur halaman website, navigasi antar halaman, serta menampilkan informasi menggunakan kerangka kerja Bootstrap.
-          </p>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Email Pengguna:</label>
+              <input type="email" name="email" id="inputEmail" class="form-control" placeholder="nama@contoh.com" />
+            </div>
 
-          <hr class="mb-4" />
+            <div class="mb-3">
+              <label class="form-label fw-bold">Kata Sandi Akun:</label>
+              <input type="password" name="password" class="form-control" placeholder="Masukkan kata sandi" />
+            </div>
 
-          <!-- Tabel Biodata -->
-          <h4 class="mb-4 fw-bold text-dark">Biodata Diri</h4>
-          <div class="table-responsive mb-5">
-            <table class="table table-bordered table-hover text-start align-middle">
-              <tbody>
-                <tr>
-                  <th style="width: 35%; background-color: #f8f9fa">Nama Lengkap</th>
-                  <td>Sasuke</td>
-                </tr>
-                <tr>
-                  <th style="background-color: #f8f9fa">Nomor Induk Mahasiswa</th>
-                  <td>24.53.030593</td>
-                </tr>
-                <tr>
-                  <th style="background-color: #f8f9fa">Program Studi</th>
-                  <td>Ilmu Komputer</td>
-                </tr>
-                <tr>
-                  <th style="background-color: #f8f9fa">Institusi Pendidikan</th>
-                  <td>Universitas Muhammadiyah Palangkaraya</td>
-                </tr>
-                <tr>
-                  <th style="background-color: #f8f9fa">Tempat & Tanggal Lahir</th>
-                  <td>China, 21 Desember 2006</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold d-block">Jenis Kelamin:</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="jenis_kelamin" value="Laki-laki" id="jkLaki" />
+                <label class="form-check-label" for="jkLaki">Laki-laki</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="jenis_kelamin" value="Perempuan" id="jkPerempuan" />
+                <label class="form-check-label" for="jkPerempuan">Perempuan</label>
+              </div>
+            </div>
 
-          <!-- Daftar Keahlian (List Group) -->
-          <h4 class="mb-3 fw-bold text-dark">Keahlian yang Dipelajari</h4>
-          <ul class="list-group list-group-flush text-start mx-auto border rounded shadow-sm" style="max-width: 500px">
-            <li class="list-group-item bg-transparent">HTML & Struktur Dasar Website</li>
-            <li class="list-group-item bg-transparent">CSS & Kerangka Kerja Bootstrap 5</li>
-            <li class="list-group-item bg-transparent">Desain Tata Letak Responsif</li>
-          </ul>
+            <div class="mb-3">
+              <label class="form-label fw-bold">Tanggal lahir Anda:</label>
+              <input type="date" name="tanggal" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Pilih Destinasi Wisata:</label>
+              <select name="menu_utama" class="form-select">
+                <option value="">-- Pilih Destinasi Wisata --</option>
+                <option value="Pantai Seminyak">Pantai Seminyak</option>
+                <option value="Pantai Doublesix">Pantai Doublesix</option>
+                <option value="Pantai Batu Belig">Pantai Batu Belig</option>
+                <option value="Pantai Suluban">Pantai Suluban</option>
+                <option value="Pantai Gunung Payung">Pantai Gunung Payung</option>
+                <option value="Pantai Nunggalan">Pantai Nunggalan</option>
+                <option value="Pantai Sindhu">Pantai Sindhu</option>
+                <option value="Air Terjun Tegenungan">Air Terjun Tegenungan</option>
+                <option value="Air Terjun Kanto Lampo">Air Terjun Kanto Lampo</option>
+                <option value="Ubud Art Market">Ubud Art Market</option>
+                <option value="Ubud Palace">Ubud Palace</option>
+                <option value="Bukit Campuhan">Bukit Campuhan</option>
+                <option value="Tegallalang Rice Terrace">Tegallalang Rice Terrace</option>
+                <option value="Alas Harum">Alas Harum</option>
+                <option value="Jalan Goutama">Jalan Goutama</option>
+                <option value="Rafting di Sungai Ayung">Rafting di Sungai Ayung</option>
+                <option value="Dermaga Kedisan">Dermaga Kedisan</option>
+                <option value="Pantai Kedungu">Pantai Kedungu</option>
+                <option value="Kebun Raya Bedugul">Kebun Raya Bedugul</option>
+                <option value="The SILA grotourism">The SILA grotourism</option>
+                <option value="Bali Farm House">Bali Farm House</option>
+                <option value="Dikubu Strawberry Farm">Dikubu Strawberry Farm</option>
+                <option value="Jatiluwih Rice Terrace">Jatiluwih Rice Terrace</option>
+                <option value="Taman Ujung">Taman Ujung</option>
+                <option value="Tirtha Gangga">Tirtha Gangga</option>
+                <option value="Savana Tianyar">Savana Tianyar</option>
+                <option value="Bukit Asah">Bukit Asah</option>
+                <option value="Pantai Amed">Pantai Amed</option>
+                <option value="Cemongkak Hill">Cemongkak Hill</option>
+                <option value="Taman Nasional Bali Barat">Taman Nasional Bali Barat</option>
+                <option value="Air Terjun Sekumpul">Air Terjun Sekumpul</option>
+                <option value="Taman Ujung Karangasem">Taman Ujung Karangasem</option>
+                <option value="Nusa Lembongan">Nusa Lembongan</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold d-block">Jenis Wisata yang Anda Minati:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Place[]" value="Pantai" id="checkPantai" />
+                <label class="form-check-label" for="checkPantai">Pantai</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Place[]" value="Pegunungan" id="checkGunung" />
+                <label class="form-check-label" for="checkGunung">Pegunungan</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Place[]" value="Wisata Budaya" id="checkBudaya" />
+                <label class="form-check-label" for="checkBudaya">Wisata Budaya</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Place[]" value="Tempat instagramable" id="checkInsta" />
+                <label class="form-check-label" for="checkInsta">Tempat instagramable</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Berapa Kali Pernah Berkunjung ke Bali:</label>
+              <input type="number" name="jumlah" min="1" class="form-control" placeholder="Contoh: 2" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">Upload Foto KTP untuk Verifikasi Data:</label>
+              <input type="file" name="bukti" class="form-control" />
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">Pesan/saran untuk Destinasi Wisata Di Bali:</label>
+              <textarea name="catatan" rows="4" class="form-control" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+            </div>
+
+            <hr class="mb-4" />
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="reset" class="btn btn-danger px-4 fw-bold">Reset Form</button>
+              <button type="submit" class="btn btn-success px-4 fw-bold">Konfirmasi</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-
     <footer class="bg-dark text-white pt-4 pb-2 mt-auto">
       <div class="container">
         <div class="row">
@@ -117,7 +184,7 @@
             <ul class="list-unstyled small">
               <li><a href="index.html" class="text-decoration-none text-secondary">Beranda</a></li>
               <li><a href="layanan.html" class="text-decoration-none text-secondary">Wisata Bali</a></li>
-              <li><a href="form.html" class="text-decoration-none text-secondary">Form Pendaftaran</a></li>
+              <li><a href="Profil.html" class="text-decoration-none text-secondary">Form Pendaftaran</a></li>
             </ul>
           </div>
           <div class="col-12 col-md-6 col-lg-3 mb-3">
@@ -134,14 +201,35 @@
       </div>
     </footer>
 
-    <!-- Tanda Pengenal Melayang -->
-    <div class="position-fixed bottom-0 end-0 p-3 text-center bg-white border border-dark rounded m-3 shadow-lg" style="z-index: 1050">
-      <img src="Folder foto/Sasuke.JPG" class="rounded-circle" style="width: 45px; height: 45px; object-fit: cover" alt="Profil Penulis" />
-      <strong class="d-block mt-2" style="font-size: 14px">Fadhil Rizqan Sasuke</strong>
-      <span class="text-muted" style="font-size: 12px">24.53.030593</span>
+    <div style="position: fixed; bottom: 10px; right: 10px; background-color: rgba(255, 255, 255, 0.9); border: 2px solid #333; padding: 10px; text-align: center; z-index: 999; border-radius: 8px">
+      <img src="Folder foto/Sasuke.JPG" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover" /><br />
+      <strong style="font-size: 14px; margin-top: 5px; display: block">Fadhil Rizqan Sasuke</strong>
+      <span style="font-size: 12px">24.53.030593</span>
     </div>
 
-    <!-- Tautan Mesin Penggerak (JS Bootstrap) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Nangkap elemen form pas disubmit
+      document.getElementById("formPemesanan").addEventListener("submit", function (event) {
+        // Nahan halaman biar nggak langsung refresh
+        event.preventDefault();
+
+        // Ambil isian dari kolom Nama dan Email
+        const nama = document.getElementById("inputNama").value;
+        const email = document.getElementById("inputEmail").value;
+
+        // Cek kalau ada yang masih kosong
+        if (nama === "" || email === "") {
+          alert("Halo bro! Pastikan lu ngisi Nama dan Email dulu ya sebelum lanjut.");
+        } else {
+          // Kalau aman, bakal muncul pop-up ini
+          alert("Mantap " + nama + "! Data lu dengan email " + email + " udah masuk. Have fun di Bali!");
+
+          // Bersihin form otomatis
+          this.reset();
+        }
+      });
+    </script>
   </body>
 </html>
